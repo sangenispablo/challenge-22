@@ -1,7 +1,14 @@
-const round = document.getElementById("round");
-const simonButtons = document.getElementsByClassName("square");
-const startButton = document.getElementById("startButton");
+// Boton de inicio
+const startButton = document.querySelector("#startButton");
+// Botones del juego
+const simonButtons = document.querySelectorAll(".square");
+// Donde voy poniendo las rondas
+const round = document.querySelector("#round");
 
+// Creo una clase y ahi guardo todo
+// Explicación de la clase
+// "round" es donde se va guardando las secuencias que se van adivinando
+// "userPosition" es el orden de la secuencia que va realizando el usuario
 class Simon {
     constructor(simonButtons, startButton, round) {
         this.round = 0;
