@@ -6,7 +6,7 @@ class Simon {
   constructor(simonButtons, startButton, round) {
     this.round = 0;
     this.userPosition = 0;
-    this.totalRounds = 4;
+    this.totalRounds = 10;
     this.sequence = [];
     this.speed = 1000;
     this.blockedButtons = true;
@@ -15,12 +15,28 @@ class Simon {
       startButton,
       round,
     };
-    this.errorSound = new Audio("./sounds/error.wav");
+    // this.errorSound = new Audio("./sounds/error.wav");
+    this.errorSound = new Howl({
+      src: "./sounds/error.wav",
+      volume: 2.5,
+    });
     this.buttonSounds = [
-      new Audio("./sounds/1.mp3"),
-      new Audio("./sounds/2.mp3"),
-      new Audio("./sounds/3.mp3"),
-      new Audio("./sounds/4.mp3"),
+      new Howl({
+        src: "./sounds/1.mp3",
+        volume: 4,
+      }),
+      new Howl({
+        src: "./sounds/2.mp3",
+        volume: 4,
+      }),
+      new Howl({
+        src: "./sounds/3.mp3",
+        volume: 4,
+      }),
+      new Howl({
+        src: "./sounds/4.mp3",
+        volume: 4,
+      }),
     ];
   }
 
